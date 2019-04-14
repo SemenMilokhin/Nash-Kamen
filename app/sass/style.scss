@@ -4,12 +4,15 @@
 //______________________________________________________________________________
 $primary-color: #1b1e21;
 $secondary-color: #7d888a;
+$ternary-color: #a1b0c1;
+$quaternary-color: #566886;
 $light-color: #fff;
 $light-color-2: #e3e8ee;
 $light-color-3: #dce4e6;
 $light-color-3: #f4f5f8;
 $contrast-color: #539ce6;
 $error-color: #e21e1e;
+$success-color: #3ab773;
 
 $search-form-shadow: 0px 7px 20px 0px rgba(38, 43, 48, 0.05);
 $card-shadow: 0px 10px 50px 0px rgba(39, 47, 64, 0.1);
@@ -61,6 +64,9 @@ body {
 	&_center {
 		text-align: center;
 		margin: 0 auto 65px;
+	}
+	&_single {
+		margin: 0 0 55px;
 	}
 }
 .section-btns {
@@ -351,7 +357,7 @@ body {
 		vertical-align: middle;
 		height: 20px;
 		padding: 0;
-		font: 500 14px/20px 'Montserrat',sans-serif;
+		font: 600 14px/20px 'Montserrat',sans-serif;
 		color: $primary-color;
 		border: none;
 		outline: none;
@@ -576,6 +582,9 @@ body {
 	&__link {
 		text-decoration: none;
 		color: $primary-color;
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
 	&__image {
 		width: 360px;
@@ -682,6 +691,9 @@ body {
 	&__link {
 		text-decoration: none;
 		color: $primary-color;
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
 	&__image {
 		display: block;
@@ -777,6 +789,9 @@ body {
 	&__link {
 		text-decoration: none;
 		color: $primary-color;
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
 	&__image {
 		width: 360px;
@@ -941,6 +956,428 @@ body {
 		line-height: 22px;
 		color: $primary-color;
 		margin: 0;
+	}
+}
+//______________________________________________________________________________
+//
+//                             Section Brands
+//______________________________________________________________________________
+.section-brands {
+	background-color: $light-color;
+	&__container {
+		padding-top: 40px;
+		padding-bottom: 65px;
+	}
+}
+.breadcrumbs {
+	position: relative;
+	list-style: none;
+	margin: 0 0 50px;
+	padding: 0 0 0 8px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 1px;
+		margin: auto;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: $contrast-color;
+	}
+	&__item {
+		position: relative;
+		font-size: 13px;
+		line-height: 15px;
+		font-weight: 500;
+		margin-right: 20px;
+		&::after {
+			content: '/';
+			position: absolute;
+			right: -11px;
+			top: 0;
+		}
+		&_this-page {
+			color: $secondary-color;
+			margin: 0;
+			&::after {
+				content: none;
+			}
+		}
+	}
+	&__link {
+		display: inline-block;
+		text-decoration: none;
+		color: $primary-color;
+	}
+}
+.brands {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	&__item {
+		position: relative;
+		background-color: $light-color-3;
+		width: 264px;
+		height: 264px;
+		margin-right: 28px;
+		border-radius: 10px;
+		overflow: hidden;
+		&:nth-last-of-type(n+5) {
+			margin-bottom: 28px;
+		}
+		&:nth-of-type(4n) {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		display: block;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__image {
+		max-height: 100%;
+		max-width: 100%;
+	}
+	&__label {
+		display: inline-block;
+		position: absolute;
+		bottom: 23px;
+		margin: 0 auto;
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 600;
+		color: $secondary-color;
+	}
+}
+//______________________________________________________________________________
+//
+//                           Section Contacts
+//______________________________________________________________________________
+.section-contacts {
+	background-color: $light-color;
+	&__container {
+		padding-top: 40px;
+		padding-bottom: 85px;
+	}
+}
+.contacts {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	&__item {
+		width: 263px;
+		height: 165px;
+		padding: 28px 30px;
+		border-radius: 10px;
+		box-shadow: $card-shadow;
+		overflow: hidden;
+		background-color: $light-color;
+	}
+	&__svg {
+		margin: 0 0 20px;
+		display: block;
+	}
+	&__svg-path {
+		fill: $contrast-color;
+		fill-rule: evenodd;
+	}
+	&__heading {
+		margin: 0 0 14px;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
+	}
+	&__info {
+		margin: 0;
+		font-size: 14px;
+		line-height: 18px;
+		color: $secondary-color;
+	}
+}
+.contacts-map {
+	width: 100%;
+	height: 240px;
+	border-radius: 10px;
+	background-color: $light-color-3;
+	overflow: hidden;
+}
+//______________________________________________________________________________
+//
+//                             Section Sales
+//______________________________________________________________________________
+.section-sales {
+	background-color: $light-color;
+	&__container {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+.sales {
+	list-style: none;
+	margin: 0 0 40px;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	.sales__item {
+		&:nth-last-of-type(n+4) {
+			margin-bottom: 30px;
+		}
+		&:nth-of-type(3n) {
+			margin-right: 0;
+		}
+	}
+	&__item {
+		width: 360px;
+		height: 375px;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: $light-color;
+		box-shadow: $card-shadow;
+		margin-right: 30px;
+	}
+	&__link {
+		text-decoration: none;
+		color: $primary-color;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	&__image {
+		width: 360px;
+		height: 200px;
+		display: block;
+	}
+	&__text-wrapper {
+		display: block;
+		padding: 0 20px;
+	}
+	&__heading-wrapper {
+		position: relative;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		margin: 0 0 18px;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: $light-color-2;
+		}
+	}
+	&__heading {
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
+		margin: 0;
+		padding: 0 0 0 20px;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 1px;
+			margin: auto;
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			background-color: $contrast-color;
+		}
+	}
+	&__description {
+		margin: 0 0 17px;
+		line-height: 16px;
+		color: $secondary-color;
+	}
+	&__date {
+		display: inline-block;
+		background-color: $success-color;
+		color: $light-color;
+		font-size: 12px;
+		line-height: 30px;
+		font-weight: 700;
+		padding: 0 20px;
+		height: 30px;
+		border-radius: 15px;
+		&_completed {
+			background-color: $light-color-2;
+			color: $secondary-color;
+		}
+	}
+}
+.pagination {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	&__item {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		line-height: 26px;
+		text-align: center;
+		overflow: hidden;
+		font-weight: 600;
+		margin-right: 7px;
+		&_not-a-link {
+			color: $quaternary-color;
+		}
+		&_selected {
+			color: $quaternary-color;
+			background-color: $light-color-3;
+		}
+		&_next-btn {
+			height: 30px;
+			line-height: 30px;
+			margin-right: 0;
+			width: 70px;
+			background-color: $light-color;
+			border-radius: 15px;
+			box-shadow: 0px 5px 20px 0px rgba(197, 206, 217, 0.3);
+		}
+	}
+	&__link {
+		text-decoration: none;
+		display: block;
+		color: $ternary-color;
+		width: 100%;
+		height: 100%;
+		transition: 0.2s;
+		&:hover {
+			background-color: $quaternary-color;
+			color: $light-color;
+		}
+		&_next-btn {
+			color: $quaternary-color;
+		}
+	}
+}
+//______________________________________________________________________________
+//
+//                             Section Sale
+//______________________________________________________________________________
+.section-sale {
+	background-color: $light-color;
+	&__container {
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}
+}
+.sale {
+	&__slider-wrapper {
+		position: relative;
+	}
+	&__slider {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		margin: 0 0 60px;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	&__slide {
+		display: inline-block;
+		width: 1140px;
+		outline: none;
+	}
+	&__slider-controls {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 0;
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		left: 0;
+	}
+	&__slider-arrow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 31px;
+		height: 31px;
+		border-radius: 50%;
+		background: none;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		padding: 0;
+		&_left {
+			margin-left: 17px;
+		}
+		&_right {
+			margin-right: 17px;
+		}
+	}
+	&__slider-svg {
+		display: block;
+		margin: 0;
+	}
+	&__slider-svg-path {
+		fill: $light-color;
+		fill-rule: evenodd;
+	}
+	&__image {
+		display: block;
+	}
+	&__title {
+		font-size: 24px;
+		line-height: 26px;
+		font-weight: 800;
+		color: $primary-color;
+		margin: 0 0 40px;
+
+	}
+	&__subtitle {
+		font-size: 18px;
+		line-height: 24px;
+		margin: 0 0 25px;
+	}
+	&__list {
+		list-style: none;
+		margin: 0 0 25px;
+		padding: 0;
+	}
+	&__list-item {
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 500;
+		color: $primary-color;
+		position: relative;
+		&::before {
+			content: '- ';
+		}
+	}
+	&__info {
+		font-size: 16px;
+		line-height: 24px;
+		color: $primary-color;
+		margin: 0 0 24px;
+		font-weight: 500;
+	}
+	&__accent {
+		font-weight: 500;
+		color: $contrast-color;
 	}
 }
 //______________________________________________________________________________

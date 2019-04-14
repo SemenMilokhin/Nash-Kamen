@@ -2,6 +2,7 @@ $(document).ready(function() {
 	initHeaderPopups();
 	initHeaderDD();
 	initClearBtn();
+	initSaleSlider();
 
 	function initHeaderPopups() {
 		var topHeader = $('.top-header'),
@@ -113,6 +114,19 @@ $(document).ready(function() {
 
 		clearBtn.on('click', function() {
 			clearBtn.removeClass('show');
+		});
+	}
+	function initSaleSlider() {
+		var wrapper = $('.sale__slider-wrapper'),
+			slider = wrapper.find('.sale__slider'),
+			controls = wrapper.find('.sale__slider-controls'),
+			lArr = controls.find('.sale__slider-arrow_left'),
+			rArr = controls.find('.sale__slider-arrow_right');
+
+		slider.slick({
+			appendArrows: controls,
+			prevArrow: lArr,
+			nextArrow: rArr
 		});
 	}
 });
