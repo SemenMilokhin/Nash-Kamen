@@ -131,15 +131,199 @@
 			</div>	
 		</div>
 	</header>
-	<section class="section-discounts">
-		<div class="container section-discounts__container">
+	<section class="section-stone-brand">
+		<div class="container section-stone-brand__container">
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs__item">
 					<a href="index.html" class="breadcrumbs__link">Главная</a>
 				</li>
-				<li class="breadcrumbs__item breadcrumbs__item_this-page">Скидки</li>
+				<li class="breadcrumbs__item breadcrumbs__item_this-page">Искусственный камень "Атлас Стоун"</li>
 			</ul>
-			<h1 class="section-title section-title_single">Скидки</h1>
+			<h1 class="section-title section-title_single">Искусственный камень "Атлас Стоун"</h1>
+			<form class="filters" method="get" action="/">
+				<ul class="filters__selects-list">
+					<li class="filters__select">
+						<button class="filters__select-btn">Бренд</button>
+						<ul class="filters__option-list">
+							<li class="filters__option" data-value="value-1">
+								Бренд-1
+							</li>
+							<li class="filters__option" data-value="value-2">
+								Бренд-2
+							</li>
+							<li class="filters__option" data-value="value-3">
+								Бренд-3
+							</li>
+							<li class="filters__option" data-value="value-4">
+								Бренд-4
+							</li>
+						</ul>
+						<input class="filters__select-input" type="hidden" name="brand" id="brand">
+					</li>
+					<li class="filters__select">
+						<button class="filters__select-btn">Размеры</button>
+						<ul class="filters__option-list">
+							<li class="filters__option" data-value="value-1">
+								Какие-то размеры-1
+							</li>
+							<li class="filters__option" data-value="value-2">
+								Какие-то размеры-2
+							</li>
+							<li class="filters__option" data-value="value-3">
+								Какие-то размеры-3
+							</li>
+							<li class="filters__option" data-value="value-4">
+								Какие-то размеры-4
+							</li>
+						</ul>
+						<input class="filters__select-input" type="hidden" name="size" id="size">
+					</li>
+				</ul>
+				<div class="filters__price">
+					<span class="filters__price-label">Стоимость:</span>
+					<input class="filters__price-input" type="text" name="price-min" placeholder="от">
+					<input class="filters__price-input" type="text" name="price-max" placeholder="до">
+				</div>
+				<ul class="filters__tags-list">
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-1" value="1" class="filters__tag-checkbox">
+						<label for="tags-1" class="filters__tag-label">Под кирпич</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-2" value="2" class="filters__tag-checkbox">
+						<label for="tags-2" class="filters__tag-label">Для фасада</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-3" value="3" class="filters__tag-checkbox">
+						<label for="tags-3" class="filters__tag-label">Для внешней отделки</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-4" value="4" class="filters__tag-checkbox">
+						<label for="tags-4" class="filters__tag-label">Для внутренней отделки</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-5" value="5" class="filters__tag-checkbox">
+						<label for="tags-5" class="filters__tag-label">Под камен</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-6" value="6" class="filters__tag-checkbox">
+						<label for="tags-6" class="filters__tag-label">Серый</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-7" value="7" class="filters__tag-checkbox">
+						<label for="tags-7" class="filters__tag-label">Медный</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-8" value="8" class="filters__tag-checkbox">
+						<label for="tags-8" class="filters__tag-label">Оранжевый</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-9" value="9" class="filters__tag-checkbox">
+						<label for="tags-9" class="filters__tag-label">Красный</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-10" value="10" class="filters__tag-checkbox">
+						<label for="tags-10" class="filters__tag-label">Коричневый</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-11" value="11" class="filters__tag-checkbox">
+						<label for="tags-11" class="filters__tag-label">Желтый</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-12" value="12" class="filters__tag-checkbox">
+						<label for="tags-12" class="filters__tag-label">Бежевый</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-13" value="13" class="filters__tag-checkbox">
+						<label for="tags-13" class="filters__tag-label">Под клинкерный кирпич</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-14" value="14" class="filters__tag-checkbox">
+						<label for="tags-14" class="filters__tag-label">Для дачи</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-15" value="15" class="filters__tag-checkbox">
+						<label for="tags-15" class="filters__tag-label">Для подпорных стен</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-16" value="16" class="filters__tag-checkbox">
+						<label for="tags-16" class="filters__tag-label">Клумбы</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-17" value="17" class="filters__tag-checkbox">
+						<label for="tags-17" class="filters__tag-label">Для камина</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-18" value="18" class="filters__tag-checkbox">
+						<label for="tags-18" class="filters__tag-label">Лофт</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-19" value="19" class="filters__tag-checkbox">
+						<label for="tags-19" class="filters__tag-label">Для кухни</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-20" value="20" class="filters__tag-checkbox">
+						<label for="tags-20" class="filters__tag-label">Для ванной</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-21" value="21" class="filters__tag-checkbox">
+						<label for="tags-21" class="filters__tag-label">Для ландшафтного дизайна</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-22" value="22" class="filters__tag-checkbox">
+						<label for="tags-22" class="filters__tag-label">Для отделки стен в квартире</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-23" value="23" class="filters__tag-checkbox">
+						<label for="tags-23" class="filters__tag-label">Для интерьера</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-24" value="24" class="filters__tag-checkbox">
+						<label for="tags-24" class="filters__tag-label">Рваный</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-25" value="25" class="filters__tag-checkbox">
+						<label for="tags-25" class="filters__tag-label">Белый</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-26" value="26" class="filters__tag-checkbox">
+						<label for="tags-26" class="filters__tag-label">Для внутренних работ</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-27" value="27" class="filters__tag-checkbox">
+						<label for="tags-27" class="filters__tag-label">Для наружных работ</label>
+					</li>
+					<li class="filters__tag">
+						<input type="checkbox" name="tags" id="tags-28" value="28" class="filters__tag-checkbox">
+						<label for="tags-28" class="filters__tag-label">Под натуральный камень</label>
+					</li>
+				</ul>
+				<div class="filters__sort">
+					<span class="filters__sort-label">Сортировать:</span>
+					<ul class="filters__sorting-types-list">
+						<li class="filters__sorting-type">
+							<input class="filters__sorting-type-checkbox" type="checkbox" name="by-price" id="sort-by-price">
+							<label class="filters__sorting-type-label" for="sort-by-price">
+								По цене
+								<svg class="filters__svg" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+									<polyline class="filters__svg-fill" points="7,8 4,11 1,8"/>
+									<line class="filters__svg-fill" x1="4" y1="11" x2="4" y2="1"/>
+								</svg>
+							</label>
+						</li>
+						<li class="filters__sorting-type">
+							<input class="filters__sorting-type-checkbox" type="checkbox" name="by-name" id="by-name">
+							<label class="filters__sorting-type-label" for="by-name">
+								По названию
+								<svg class="filters__svg" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+									<polyline class="filters__svg-fill" points="7,8 4,11 1,8"/>
+									<line class="filters__svg-fill" x1="4" y1="11" x2="4" y2="1"/>
+								</svg>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</form>
 			<ul class="offers">
 				<li class="offers__item">
 					<a href="stone_type.html" class="offers__link">
