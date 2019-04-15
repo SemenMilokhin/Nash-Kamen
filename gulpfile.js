@@ -4,8 +4,8 @@ var browserSync  = require('browser-sync').create(),
 	sass         = require('gulp-sass'),
 	concat       = require('gulp-concat'),
 	minCSS       = require('gulp-clean-css'),
-	imageMin     = require('gulp-imagemin'),
-	pngquant     = require('imagemin-pngquant'),
+	// imageMin     = require('gulp-imagemin'),
+	// pngquant     = require('imagemin-pngquant'),
 	rename       = require("gulp-rename"),
 	uglify       = require('gulp-uglify'),
 	clean        = require('gulp-clean');
@@ -17,6 +17,16 @@ function initProductionServer() {
 		}
 	});
 }
+
+function initBrowserSyncAndWatchServer() {
+	browserSync.init({
+		server: {
+			baseDir: 'app'
+		}
+	});
+	gulp.watch('app/sass/**/*.+(scss|sass)').on('change', compileSass);
+	gulp.watch(['app/js/**/*.js','app/**/*.html']).on('change', browserSync.reload);
+};
 
 function initBrowserSyncAndWatch() {
 	browserSync.init({
@@ -69,16 +79,16 @@ function buildHTML() {
 		.pipe(gulp.dest('dist'));
 }
 
-function buildImages() {
-	return gulp.src('app/img/**/*')
-		.pipe(imageMin({
-			interlaced: true,
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant()]
-		}))
-		.pipe(gulp.dest('dist/img'));
-};
+// function buildImages() {
+// 	return gulp.src('app/img/**/*')
+// 		.pipe(imageMin({
+// 			interlaced: true,
+// 			progressive: true,
+// 			svgoPlugins: [{removeViewBox: false}],
+// 			use: [pngquant()]
+// 		}))
+// 		.pipe(gulp.dest('dist/img'));
+// };
 
 function buildFonts() {
 	return gulp.src('app/fonts/**')
@@ -95,13 +105,14 @@ exports.cleanDist = cleanDirectory;
 exports.sass = compileSass;
 exports.includeLibs = gulp.series(includeJSLibs,includeCSSLibs);
 
-exports.watch = gulp.series(compileSass, initBrowserSyncAndWatch);
-exports.build = gulp.series(cleanDirectory,buildImages,buildFonts,includeJSLibs,includeCSSLibs,buildHTML,buildCSS,buildJS);
+exports.proxyWatch = gulp.series(compileSass, initBrowserSyncAndWatch);
+exports.serverWatch = gulp.series(compileSass, initBrowserSyncAndWatchServer);
+// exports.build = gulp.series(cleanDirectory,buildImages,buildFonts,includeJSLibs,includeCSSLibs,buildHTML,buildCSS,buildJS);
 
 exports.clean = cleanDirectory;
 exports.buildCss = buildCSS;
 exports.buildJs = buildJS;
 exports.buildFnt = buildFonts;
-exports.standartBuild = gulp.series(cleanDirectory, compileSass, buildHTML, buildCSS, buildJS, buildImages, buildFonts, initProductionServer);
+// exports.standartBuild = gulp.series(cleanDirectory, compileSass, buildHTML, buildCSS, buildJS, buildImages, buildFonts, initProductionServer);
 
 exports.default = gulp.series(compileSass, initBrowserSyncAndWatch);
