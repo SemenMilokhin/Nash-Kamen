@@ -128,199 +128,111 @@
 			</div>	
 		</div>
 	</header>
-	<section class="section-stone-brand">
-		<div class="container section-stone-brand__container">
+	<section class="section-stone">
+		<div class="container section-stone__container">
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs__item">
 					<a href="index.html" class="breadcrumbs__link">Главная</a>
 				</li>
-				<li class="breadcrumbs__item breadcrumbs__item_this-page">Искусственный камень "Атлас Стоун"</li>
+				<li class="breadcrumbs__item">
+					<a href="catalog.html" class="breadcrumbs__link">Наша продукция</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="stone_type.html" class="breadcrumbs__link">Искусственный камень</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="stone_brand.html" class="breadcrumbs__link">Атлас стоун</a>
+				</li>
+				<li class="breadcrumbs__item breadcrumbs__item_this-page">Министр</li>
 			</ul>
-			<h1 class="section-title section-title_single">Искусственный камень "Атлас Стоун"</h1>
-			<form class="filters" method="get" action="/">
-				<ul class="filters__selects-list">
-					<li class="filters__select">
-						<button class="filters__select-btn">Бренд</button>
-						<ul class="filters__option-list">
-							<li class="filters__option" data-value="value-1">
-								Бренд-1
-							</li>
-							<li class="filters__option" data-value="value-2">
-								Бренд-2
-							</li>
-							<li class="filters__option" data-value="value-3">
-								Бренд-3
-							</li>
-							<li class="filters__option" data-value="value-4">
-								Бренд-4
-							</li>
-						</ul>
-						<input class="filters__select-input" type="hidden" name="brand" id="brand">
-					</li>
-					<li class="filters__select">
-						<button class="filters__select-btn">Размеры</button>
-						<ul class="filters__option-list">
-							<li class="filters__option" data-value="value-1">
-								Какие-то размеры-1
-							</li>
-							<li class="filters__option" data-value="value-2">
-								Какие-то размеры-2
-							</li>
-							<li class="filters__option" data-value="value-3">
-								Какие-то размеры-3
-							</li>
-							<li class="filters__option" data-value="value-4">
-								Какие-то размеры-4
-							</li>
-						</ul>
-						<input class="filters__select-input" type="hidden" name="size" id="size">
-					</li>
-				</ul>
-				<div class="filters__price">
-					<span class="filters__price-label">Стоимость:</span>
-					<input class="filters__price-input" type="text" name="price-min" placeholder="от">
-					<input class="filters__price-input" type="text" name="price-max" placeholder="до">
+			<h1 class="section-title section-title_single">Искусственный камень Уайт Клиффс</h1>
+			<div class="stone">
+				<div class="stone__first-content-part">
+					<img src="img/stone-image.jpg" alt="stone-image" class="stone__image">
+					<form class="stone__calc" method="get" action="/">
+						<div class="stone__calc-left-part">
+							<div class="stone__select">
+								<ul class="stone__option-list">
+									<li class="stone__option" data-value="value-1">
+										Выбор цвета 1
+									</li>
+									<li class="stone__option" data-value="value-2">
+										Выбор цвета 2
+									</li>
+									<li class="stone__option" data-value="value-3">
+										Выбор цвета 3
+									</li>
+									<li class="stone__option" data-value="value-4">
+										Выбор цвета 4
+									</li>
+								</ul>
+								<button class="stone__select-btn">Выбор цвета</button>
+								<input class="stone__select-input" type="hidden" name="select">
+							</div>
+							<div class="stone__select">
+								<ul class="stone__option-list">
+									<li class="stone__option" data-value="value-1">
+										Размеры 1
+									</li>
+									<li class="stone__option" data-value="value-2">
+										Размеры 2
+									</li>
+									<li class="stone__option" data-value="value-3">
+										Размеры 3
+									</li>
+									<li class="stone__option" data-value="value-4">
+										Размеры 4
+									</li>
+								</ul>
+								<button class="stone__select-btn">Размеры</button>
+								<input class="stone__select-input" type="hidden" name="select">
+							</div>
+							<input type="text" class="stone__input" name="quantity" id="quantity" placeholder="Количество">
+						</div>
+						<div class="stone__calc-right-part">
+							<p class="stone__price-label">Ваша цена сегодня:</p>
+							<p class="stone__price">32 300 ₽</p>
+							<div class="stone__order-btn-wrapper">
+								<button class="stone__order-btn">Заказать</button>
+							</div>
+						</div>
+					</form>
 				</div>
-				<ul class="filters__tags-list">
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-1" value="1" class="filters__tag-checkbox">
-						<label for="tags-1" class="filters__tag-label">Под кирпич</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-2" value="2" class="filters__tag-checkbox">
-						<label for="tags-2" class="filters__tag-label">Для фасада</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-3" value="3" class="filters__tag-checkbox">
-						<label for="tags-3" class="filters__tag-label">Для внешней отделки</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-4" value="4" class="filters__tag-checkbox">
-						<label for="tags-4" class="filters__tag-label">Для внутренней отделки</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-5" value="5" class="filters__tag-checkbox">
-						<label for="tags-5" class="filters__tag-label">Под камен</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-6" value="6" class="filters__tag-checkbox">
-						<label for="tags-6" class="filters__tag-label">Серый</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-7" value="7" class="filters__tag-checkbox">
-						<label for="tags-7" class="filters__tag-label">Медный</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-8" value="8" class="filters__tag-checkbox">
-						<label for="tags-8" class="filters__tag-label">Оранжевый</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-9" value="9" class="filters__tag-checkbox">
-						<label for="tags-9" class="filters__tag-label">Красный</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-10" value="10" class="filters__tag-checkbox">
-						<label for="tags-10" class="filters__tag-label">Коричневый</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-11" value="11" class="filters__tag-checkbox">
-						<label for="tags-11" class="filters__tag-label">Желтый</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-12" value="12" class="filters__tag-checkbox">
-						<label for="tags-12" class="filters__tag-label">Бежевый</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-13" value="13" class="filters__tag-checkbox">
-						<label for="tags-13" class="filters__tag-label">Под клинкерный кирпич</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-14" value="14" class="filters__tag-checkbox">
-						<label for="tags-14" class="filters__tag-label">Для дачи</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-15" value="15" class="filters__tag-checkbox">
-						<label for="tags-15" class="filters__tag-label">Для подпорных стен</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-16" value="16" class="filters__tag-checkbox">
-						<label for="tags-16" class="filters__tag-label">Клумбы</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-17" value="17" class="filters__tag-checkbox">
-						<label for="tags-17" class="filters__tag-label">Для камина</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-18" value="18" class="filters__tag-checkbox">
-						<label for="tags-18" class="filters__tag-label">Лофт</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-19" value="19" class="filters__tag-checkbox">
-						<label for="tags-19" class="filters__tag-label">Для кухни</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-20" value="20" class="filters__tag-checkbox">
-						<label for="tags-20" class="filters__tag-label">Для ванной</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-21" value="21" class="filters__tag-checkbox">
-						<label for="tags-21" class="filters__tag-label">Для ландшафтного дизайна</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-22" value="22" class="filters__tag-checkbox">
-						<label for="tags-22" class="filters__tag-label">Для отделки стен в квартире</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-23" value="23" class="filters__tag-checkbox">
-						<label for="tags-23" class="filters__tag-label">Для интерьера</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-24" value="24" class="filters__tag-checkbox">
-						<label for="tags-24" class="filters__tag-label">Рваный</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-25" value="25" class="filters__tag-checkbox">
-						<label for="tags-25" class="filters__tag-label">Белый</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-26" value="26" class="filters__tag-checkbox">
-						<label for="tags-26" class="filters__tag-label">Для внутренних работ</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-27" value="27" class="filters__tag-checkbox">
-						<label for="tags-27" class="filters__tag-label">Для наружных работ</label>
-					</li>
-					<li class="filters__tag">
-						<input type="checkbox" name="tags" id="tags-28" value="28" class="filters__tag-checkbox">
-						<label for="tags-28" class="filters__tag-label">Под натуральный камень</label>
-					</li>
-				</ul>
-				<div class="filters__sort">
-					<span class="filters__sort-label">Сортировать:</span>
-					<ul class="filters__sorting-types-list">
-						<li class="filters__sorting-type">
-							<input class="filters__sorting-type-checkbox" type="checkbox" name="by-price" id="sort-by-price">
-							<label class="filters__sorting-type-label" for="sort-by-price">
-								По цене
-								<svg class="filters__svg" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-									<polyline class="filters__svg-fill" points="7,8 4,11 1,8"/>
-									<line class="filters__svg-fill" x1="4" y1="11" x2="4" y2="1"/>
-								</svg>
-							</label>
-						</li>
-						<li class="filters__sorting-type">
-							<input class="filters__sorting-type-checkbox" type="checkbox" name="by-name" id="by-name">
-							<label class="filters__sorting-type-label" for="by-name">
-								По названию
-								<svg class="filters__svg" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-									<polyline class="filters__svg-fill" points="7,8 4,11 1,8"/>
-									<line class="filters__svg-fill" x1="4" y1="11" x2="4" y2="1"/>
-								</svg>
-							</label>
-						</li>
+				<div class="stone__content-wrapper">
+					<ul class="stone__tabs-list">
+						<li class="stone__tab stone__tab_selected">Описание</li>
+						<li class="stone__tab">Видео и советы</li>
 					</ul>
+					<div class="stone__content">
+						<div class="stone__description">
+							<h2 class="stone__content-title">Характеристики</h2>
+							<p class="stone__content-paragraph">Тип товара..........................................................................................................................................................................................................................................................................Плоскость</p>
+							<p class="stone__content-paragraph">Длина (см)...............................................................................................................................................................................................................................................................................50, 30, 20</p>
+							<p class="stone__content-paragraph">Высота (см) .............................................................................................................................................................................................................................................................................................10</p>
+							<p class="stone__content-paragraph">Толщина (см).......................................................................................................................................................................................................................................................................................3-7</p>
+							<p class="stone__content-paragraph">Норма расшивки (см) ................................................................................................................................................................................................................................................................... --</p>
+							<p class="stone__content-paragraph">Норма упаковки в гофротару (м2/м п.)...........................................................................................................................................................................................................................0,4</p>
+							<p class="stone__content-paragraph">Норма упаковки в мастербокс (м2/м п.)......................................................................................................................................................................................................................8,16</p>
+							<p class="stone__content-paragraph">Вес (кг/м²)............................................................................................................................................................................................................................................................................................85,3</p>
+							<p class="stone__content-paragraph">Артикул.............................................................................................................................................................................................................................................................................................150-10</p>
+							<p class="stone__content-paragraph">Цвет.............................................................................................................................................................................................................................................................................................Бежевый</p>
+							<p class="stone__content-paragraph">Норма упаковки.........................................................................................................................................................................................................................................................Мастербокс</p>
+							<p class="stone__content-paragraph">Коллекции....................................................................................................................................................................................................................................................................Уайт Клиффс</p>
+							<p class="stone__content-paragraph">Применение................................................................................................................Дача, Для внешней отделки, Для внутренних работ, Для зоны барбекю</p>
+							<p class="stone__content-paragraph">Рисунок.............................................................................................................................................................................................................................................................................Под камень</p>
+						</div>
+						<div class="stone__video">
+							<h2 class="stone__content-title">Видео и советы</h2>
+							<p class="stone__content-paragraph">какой-то контент</p>
+							<p class="stone__content-paragraph">какой-то контент</p>
+							<p class="stone__content-paragraph">какой-то контент</p>
+							<p class="stone__content-paragraph">какой-то контент</p>
+							<p class="stone__content-paragraph">какой-то контент</p>
+						</div>
+					</div>
 				</div>
-			</form>
+			</div>
+			<h2 class="section-title section-title_center">Рекомендуемые товары</h2>
 			<ul class="offers">
 				<li class="offers__item">
 					<a href="stone_type.html" class="offers__link">
@@ -329,7 +241,6 @@
 							<span class="offers__heading-wrapper">
 								<span class="offers__heading">Спецпредложение 1</span>
 							</span>
-							<span class="offers__colors"><span class="offers__colors-accent">389</span> вариантов расцветки</span>
 							<span class="offers__price">4 500 ₽</span>
 							<span class="offers__last-price">8 450 ₽</span>
 						</span>
@@ -342,7 +253,6 @@
 							<span class="offers__heading-wrapper">
 								<span class="offers__heading">Спецпредложение 1</span>
 							</span>
-							<span class="offers__colors"><span class="offers__colors-accent">389</span> вариантов расцветки</span>
 							<span class="offers__price">4 500 ₽</span>
 							<span class="offers__last-price">8 450 ₽</span>
 						</span>
@@ -355,7 +265,6 @@
 							<span class="offers__heading-wrapper">
 								<span class="offers__heading">Спецпредложение 1</span>
 							</span>
-							<span class="offers__colors"><span class="offers__colors-accent">389</span> вариантов расцветки</span>
 							<span class="offers__price">4 500 ₽</span>
 							<span class="offers__last-price">8 450 ₽</span>
 						</span>
@@ -368,86 +277,15 @@
 							<span class="offers__heading-wrapper">
 								<span class="offers__heading">Спецпредложение 1</span>
 							</span>
-							<span class="offers__colors"><span class="offers__colors-accent">389</span> вариантов расцветки</span>
-							<span class="offers__price">4 500 ₽</span>
-							<span class="offers__last-price">8 450 ₽</span>
-						</span>
-					</a>
-				</li>
-				<li class="offers__item">
-					<a href="stone_type.html" class="offers__link">
-						<img src="img/offers-image.jpg" alt="offers-image" class="offers__image">
-						<span class="offers__text-part">
-							<span class="offers__heading-wrapper">
-								<span class="offers__heading">Спецпредложение 1</span>
-							</span>
-							<span class="offers__colors"><span class="offers__colors-accent">389</span> вариантов расцветки</span>
-							<span class="offers__price">4 500 ₽</span>
-							<span class="offers__last-price">8 450 ₽</span>
-						</span>
-					</a>
-				</li>
-				<li class="offers__item">
-					<a href="stone_type.html" class="offers__link">
-						<img src="img/offers-image.jpg" alt="offers-image" class="offers__image">
-						<span class="offers__text-part">
-							<span class="offers__heading-wrapper">
-								<span class="offers__heading">Спецпредложение 1</span>
-							</span>
-							<span class="offers__colors"><span class="offers__colors-accent">389</span> вариантов расцветки</span>
-							<span class="offers__price">4 500 ₽</span>
-							<span class="offers__last-price">8 450 ₽</span>
-						</span>
-					</a>
-				</li>
-				<li class="offers__item">
-					<a href="stone_type.html" class="offers__link">
-						<img src="img/offers-image.jpg" alt="offers-image" class="offers__image">
-						<span class="offers__text-part">
-							<span class="offers__heading-wrapper">
-								<span class="offers__heading">Спецпредложение 1</span>
-							</span>
-							<span class="offers__colors"><span class="offers__colors-accent">389</span> вариантов расцветки</span>
-							<span class="offers__price">4 500 ₽</span>
-							<span class="offers__last-price">8 450 ₽</span>
-						</span>
-					</a>
-				</li>
-				<li class="offers__item">
-					<a href="stone_type.html" class="offers__link">
-						<img src="img/offers-image.jpg" alt="offers-image" class="offers__image">
-						<span class="offers__text-part">
-							<span class="offers__heading-wrapper">
-								<span class="offers__heading">Спецпредложение 1</span>
-							</span>
-							<span class="offers__colors"><span class="offers__colors-accent">389</span> вариантов расцветки</span>
 							<span class="offers__price">4 500 ₽</span>
 							<span class="offers__last-price">8 450 ₽</span>
 						</span>
 					</a>
 				</li>
 			</ul>
-			<ul class="pagination">
-				<li class="pagination__item pagination__item_selected">1</li>
-				<li class="pagination__item">
-					<a href="#" class="pagination__link">2</a>
-				</li>
-				<li class="pagination__item">
-					<a href="#" class="pagination__link">3</a>
-				</li>
-				<li class="pagination__item">
-					<a href="#" class="pagination__link">4</a>
-				</li>
-				<li class="pagination__item">
-					<a href="#" class="pagination__link">5</a>
-				</li>
-				<li class="pagination__item pagination__item_not-a-link">
-					...
-				</li>
-				<li class="pagination__item pagination__item_next-btn">
-					<a href="#" class="pagination__link pagination__link_next-btn">Далее</a>
-				</li>
-			</ul>
+			<div class="section-btns">
+				<a href="discounts.html" class="section-btns__item">Все спецпредложения</a>
+			</div>
 		</div>
 	</section>
 	<footer class="footer">

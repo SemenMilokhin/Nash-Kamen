@@ -108,6 +108,7 @@ body {
 }
 .logo {
 	position: absolute;
+	z-index: 5;
 	left: 0;
 	top: 0;
 	font-size: 0;
@@ -636,6 +637,7 @@ body {
 		height: 50px;
 	}
 	&__heading {
+		display: block;
 		position: relative;
 		font-size: 16px;
 		line-height: 18px;
@@ -759,9 +761,13 @@ body {
 		}
 	}
 	&__heading {
+		display: block;
 		margin: 0;
 		padding: 0 0 0 20px;
 		position: relative;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
 		&::before {
 			content: '';
 			position: absolute;
@@ -868,6 +874,7 @@ body {
 		}
 	}
 	&__heading {
+		display: block;
 		margin: 0;
 		font-size: 16px;
 		line-height: 18px;
@@ -1233,6 +1240,7 @@ body {
 		}
 	}
 	&__heading {
+		display: block;
 		font-size: 16px;
 		line-height: 18px;
 		font-weight: 700;
@@ -1253,6 +1261,7 @@ body {
 		}
 	}
 	&__description {
+		display: block;
 		margin: 0 0 17px;
 		line-height: 16px;
 		color: $secondary-color;
@@ -1426,8 +1435,7 @@ body {
 		font-weight: 500;
 	}
 	&__accent {
-		font-weight: 500;
-		color: $contrast-color;
+		font-weight: 600;
 	}
 }
 //______________________________________________________________________________
@@ -1454,7 +1462,7 @@ body {
 		&-head-cell {
 			font-size: 14px;
 			line-height: 16px;
-			font-weight: 400;
+			font-weight: 600;
 			color: $primary-color;
 			white-space: nowrap;
 			padding: 15px 0;
@@ -1546,10 +1554,11 @@ body {
 			margin: 0 0 13px;
 		}
 		&-input {
+			text-align: center;
 			width: 80px;
 			font: 600 16px/18px 'Montserrat',sans-serif;
 			color: $primary-color;
-			padding: 13px 20px;
+			padding: 13px 10px;
 			background: none;
 			border: 2px solid $light-color-3;
 			border-radius: 10px;
@@ -1765,7 +1774,7 @@ body {
 	&__submit-btn {
 		display: inline-block;
 		font: 700 16px/18px 'Montserrat',sans-serif;
-		color: $primary-color;
+		color: $light-color;
 		padding: 20px 50px;
 		box-sizing: border-box;
 		cursor: pointer;
@@ -1785,7 +1794,7 @@ body {
 //
 //                        Section Discounts + Search
 //______________________________________________________________________________
-.section-discounts, .section-search, .section-stone-brand {
+.section-discounts, .section-search, .section-stone-brand, .section-stone {
 	background-color: $light-color;
 	&__container {
 		padding-top: 40px;
@@ -2033,6 +2042,234 @@ body {
 		&:checked ~ .filters__tag-label {
 			color: $contrast-color;
 		}
+	}
+}
+//______________________________________________________________________________
+//
+//                           Section Stone
+//______________________________________________________________________________
+.stone {
+	&__first-content-part {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 150px;
+	}
+	&__image {
+		display: block;
+		max-width: 430px;
+		max-height: 285px;
+		border-radius: 10px;
+	}
+	&__calc {
+		padding: 50px;
+		background-color: $light-color;
+		box-shadow: $card-shadow;
+		border-radius: 10px;
+		&-left-part {
+			display: inline-block;
+			margin-right: 100px;
+			position: relative;
+			:last-child {
+				margin-bottom: 0;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: -51px;
+				height: 100%;
+				width: 2px;
+				background-color: $light-color-2;
+			}
+		}
+		&-right-part {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	&__select {
+		display: block;
+		position: relative;
+		margin-bottom: 20px;
+		&:nth-of-type(1) {
+			z-index: 3;
+		}
+		&:nth-of-type(2) {
+			z-index: 2;
+		}
+		&:nth-of-type(3) {
+			z-index: 1;
+		}
+	}
+	&__select-btn {
+		min-width: 260px;
+		display: inline-block;
+		position: relative;
+		font: 600 14px/16px 'Montserrat',sans-serif;
+		padding: 16px 54px 14px 35px;
+		text-align: left;
+		color: $primary-color;
+		background-color: $light-color;
+		border: 2px solid transparentize($secondary-color,0.85);
+		border-radius: 25px;
+		outline: none;
+		cursor: pointer;
+		&::after {
+			content: '';
+			position: absolute;
+			right: 20px;
+			top: 18px;
+			width: 7px;
+			height: 7px;
+			border: 1px solid $ternary-color;
+			border-top: none;
+			border-right: none;
+			transform: rotate(-45deg);
+			transition: 0.2s;
+		}
+		&.opened {
+			z-index: 6;
+			&::after {
+				transform: rotate(45deg) rotateX(180deg) translate(3px, -3px);
+			}
+		}
+	}
+	&__option-list {
+		list-style: none;
+		margin: 0;
+		padding: 22px 0 0 0;
+		position: absolute;
+		clip: rect(0, 9999px, 0, 0);
+		top: 27px;
+		left: 0;
+		width: 100%;
+		background-color: $light-color;
+		border: 2px solid transparentize($secondary-color,0.85);
+		border-radius: 0 0 25px 25px;
+		overflow: hidden;
+		border-top: none;
+		transition: 0.3s;
+	}
+	&__option {
+		font: 600 14px/16px 'Montserrat',sans-serif;
+		color: $primary-color;
+		cursor: pointer;
+		padding: 15px 35px;
+		&:hover {
+			background-color: $light-color-3;
+		}
+	}
+	&__input {
+		min-width: 260px;
+		display: inline-block;
+		font: 600 14px/16px 'Montserrat',sans-serif;
+		padding: 16px 35px 14px;
+		color: $primary-color;
+		background-color: $light-color;
+		border: 2px solid transparentize($secondary-color,0.85);
+		border-radius: 25px;
+		outline: none;
+		margin: 0;
+		@include placeholder {
+			font-family: 'Montserrat',sans-serif;
+			color: $primary-color;
+		}
+	}
+	&__price-label {
+		display: block;
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 600;
+		color: $secondary-color;
+		margin: 0 0 10px;
+	}
+	&__price {
+		display: block;
+		font-size: 30px;
+		line-height: 32px;
+		font-weight: 700;
+		color: $primary-color;
+		margin: 0 0 10px;
+	}
+	&__order-btn {
+		padding: 0 55px;
+		height: 50px;
+		font: 700 16px/46px 'Montserrat',sans-serif;
+		border-radius: 25px;
+		border: 2px solid $contrast-color;
+		outline: none;
+		cursor: pointer;
+		color: $light-color;
+		display: inline-block;
+		background-color: $contrast-color;
+		transition: 0.2s;
+		&:hover {
+			background-color: transparent;
+			color: $contrast-color;
+			box-shadow: $submit-btn-glow;
+		}
+	}
+	&__content-wrapper {
+		position: relative;
+		z-index: 0;
+		background-color: $light-color;
+		box-shadow: $card-shadow;
+		border-radius: 0 10px 10px 10px;
+	}
+	&__content {
+		background-color: $light-color;
+		padding: 60px 95px;
+		margin: 80px 0 85px;
+		border-radius: 0 10px 10px 10px;
+	}
+	&__tabs-list {
+		position: absolute;
+		z-index: -1;
+		bottom: 100%;
+		left: 0;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+	}
+	&__tab {
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: bottom;
+		text-align: center;
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 600;
+		color: $light-color;
+		background-color: $contrast-color;
+		min-width: 215px;
+		padding: 20px 20px 16px;
+		&:first-of-type {
+			border-radius: 10px 0 0 0;
+		}
+		&:last-of-type {
+			border-radius: 0 10px 0 0;
+		}
+		&.stone__tab_selected {
+			color: $primary-color;
+			box-shadow: $card-shadow;
+			background-color: $light-color;
+			padding-top: 40px;
+			border-radius: 10px 10px 0 0;
+		}
+	}
+	&__content-title {
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: 700;
+		margin: 0 0 40px;
+	}
+	&__content-paragraph {
+		font-size: 14px;
+		line-height: 24px;
+		color: $secondary-color;
+		margin: 0;
 	}
 }
 //______________________________________________________________________________
