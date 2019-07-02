@@ -445,7 +445,9 @@ body {
 		top: 15px;
 		left: -40px;
 		clip: rect(0, 9999px, 0, 0);
-		transition: clip 0.5s;
+	}
+	&__drop-down-list-item {
+		position: relative;
 	}
 	&__drop-down-link {
 		padding: 0 40px;
@@ -459,6 +461,19 @@ body {
 		height: 30px;
 		&:hover {
 			background-color: $light-color-3;
+		}
+	}
+	&__subcategories-list {
+		display: none;
+		position: absolute;
+		left: 100%;
+		top: -1px;
+		font-size: 14px;
+		list-style: none;
+		margin: 0;
+		padding: 0 0 0 1px;
+		&:hover {
+			display: block;
 		}
 	}
 	&__link {
