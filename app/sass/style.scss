@@ -1357,6 +1357,10 @@ body {
 		}
 		&_next-btn {
 			color: $quaternary-color;
+			border: none;
+			cursor: pointer;
+			font: 600 14px/30px 'Montserrat',sans-serif;
+			background-color: transparent;
 		}
 	}
 }
