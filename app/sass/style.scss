@@ -1318,6 +1318,9 @@ body {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	> :last-child {
+		margin-right: 0;
+	}
 	&__item {
 		width: 25px;
 		height: 25px;
@@ -1334,10 +1337,9 @@ body {
 			color: $quaternary-color;
 			background-color: $light-color-3;
 		}
-		&_next-btn {
+		&_next-btn, &_prev-btn {
 			height: 30px;
 			line-height: 30px;
-			margin-right: 0;
 			width: 70px;
 			background-color: $light-color;
 			border-radius: 15px;
@@ -1355,7 +1357,7 @@ body {
 			background-color: $quaternary-color;
 			color: $light-color;
 		}
-		&_next-btn {
+		&_next-btn, &_prev-btn {
 			color: $quaternary-color;
 			border: none;
 			cursor: pointer;
