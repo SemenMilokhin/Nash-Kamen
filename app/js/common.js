@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	initHeaderPopups();
 	initHeaderDD();
+	initMainSlider();
 	initClearBtn();
 	initSaleSlider();
 	initFiltersFunctional();
@@ -124,6 +125,21 @@ $(document).ready(function() {
 					closeDD();
 				}
 			});
+		});
+	}
+	function initMainSlider() {
+		var slider = $('.main-slider'),
+			slides = slider.find('.main-slider__slides'),
+			controls = slider.find('.main-slider__controls'),
+			arrowLeft = controls.find('.main-slider__arrow_left'),
+			arrowRight = controls.find('.main-slider__arrow_right');
+
+		slides.slick({
+			autoplay: true,
+			autoplaySpeed: 5000,
+			appendArrows: controls,
+			prevArrow: arrowLeft,
+			nextArrow: arrowRight
 		});
 	}
 	function initClearBtn() {
