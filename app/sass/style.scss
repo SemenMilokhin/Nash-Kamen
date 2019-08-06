@@ -91,6 +91,18 @@ body {
 		}
 	}
 }
+.scalable-image {
+	display: block;
+	position: absolute;
+	top: -9999%;
+	right: -9999%;
+	bottom: -9999%;
+	left: -9999%;
+	margin: auto;
+	min-width: 1000%;
+	min-height: 1000%;
+	transform: scale(0.1);
+}
 //______________________________________________________________________________
 //
 //                               Header
@@ -688,7 +700,7 @@ body {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		:last-child {
+		> :last-child {
 			margin-bottom: 0;
 		}
 		&::after {
@@ -755,9 +767,10 @@ body {
 		height: 100%;
 	}
 	&__image {
-		width: 360px;
-		height: 200px;
 		display: block;
+		position: relative;
+		overflow: hidden;
+		height: 200px;
 		&_low-height {
 			height: 120px;
 		}
@@ -868,7 +881,8 @@ body {
 	}
 	&__image {
 		display: block;
-		width: 264px;
+		position: relative;
+		overflow: hidden;
 		height: 200px;
 	}
 	&__text-part {
@@ -982,7 +996,8 @@ body {
 		height: 100%;
 	}
 	&__image {
-		width: 360px;
+		position: relative;
+		overflow: hidden;
 		height: 200px;
 		display: block;
 	}
@@ -1030,9 +1045,13 @@ body {
 		justify-content: space-between;
 	}
 	&__image {
+		position: relative;
+		overflow: hidden;
+		width: 555px;
 		height: 843px;
 	}
 	&__content-wrapper {
+		flex-shrink: 99999;
 		height: 683px;
 		margin: 80px 0 80px 60px;
 		overflow: auto;
@@ -1347,9 +1366,10 @@ body {
 		height: 100%;
 	}
 	&__image {
-		width: 360px;
 		height: 200px;
 		display: block;
+		position: relative;
+		overflow: hidden;
 	}
 	&__text-wrapper {
 		display: block;
@@ -1495,6 +1515,9 @@ body {
 	&__slide {
 		display: inline-block;
 		width: 1140px;
+		height: 375px;
+		position: relative;
+		overflow: hidden;
 		outline: none;
 	}
 	&__slider-controls {
@@ -1636,7 +1659,7 @@ body {
 			font-weight: 600;
 			color: $primary-color;
 			padding: 17px 32px;
-			:last-child {
+			> :last-child {
 				margin-bottom: 0;
 			}
 			&_main {
@@ -1662,10 +1685,11 @@ body {
 			}
 		}
 		&-image {
-			display: block;
+			position: relative;
+			overflow: hidden;
 			margin-right: 20px;
-			max-width: 130px;
-			max-height: 170px;
+			width: 130px;
+			height: 120px;
 		}
 		&-text-wrapper {
 			padding-top: 25px;
@@ -1989,10 +2013,11 @@ body {
 		}
 	}
 	&__image {
-		display: block;
-		width: 100%;
 		border-radius: 10px;
 		margin: 60px 0 65px;
+		height: 300px;
+		overflow: hidden;
+		position: relative;
 	}
 }
 //______________________________________________________________________________
@@ -2194,10 +2219,11 @@ body {
 		margin: 0 0 150px;
 	}
 	&__image {
-		display: block;
-		max-width: 430px;
-		max-height: 285px;
+		width: 430px;
+		height: 285px;
 		border-radius: 10px;
+		position: relative;
+		overflow: hidden;
 	}
 	&__calc {
 		padding: 50px;
