@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nash Kamen</title>
-
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="sass/style.scss">
 </head>
 <body>
 	<header class="header">
@@ -128,156 +127,57 @@
 			</div>	
 		</div>
 	</header>
-	<section class="section-cart">
-		<div class="container section-cart__container">
+	<section class="section-service-information">
+		<div class="container section-service-information__container">
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs__item">
 					<a href="index.html" class="breadcrumbs__link">Главная</a>
 				</li>
-				<li class="breadcrumbs__item breadcrumbs__item_this-page">Корзина</li>
+				<li class="breadcrumbs__item breadcrumbs__item_this-page">Кредит</li>
 			</ul>
-			<h1 class="section-title section-title_single">Корзина</h1>
-			<form action="/" method="post" class="cart" id="cart-form">
-				<table class="cart__table">
-					<tr class="cart__table-head">
-						<th class="cart__table-head-cell cart__table-head-cell_main">Наименование</th>
-						<th class="cart__table-head-cell cart__table-head-cell_padding">Цена</th>
-						<th class="cart__table-head-cell cart__table-head-cell_padding">К-во</th>
-						<th class="cart__table-head-cell cart__table-head-cell_padding">Стоимость</th>
-						<th class="cart__table-head-cell">Удалить</th>
-					</tr>
-					<tr class="cart__table-row">
-						<td class="cart__table-cell cart__table-cell_main">
-							<div class="cart__table-image">
-								<img src="img/cart-example-image.jpg" alt="cart-example-image" class="scalable-image">
-							</div>
-							<div class="cart__table-text-wrapper">
-								<h4 class="cart__table-title">Уайт Клиффс</h4>
-								<h5 class="cart__table-subtitle">Размер:</h5>
-								<p class="cart__table-info">
-									150-10
-								</p>
-							</div>
-						</td>
-						<td class="cart__table-cell">28500</td>
-						<td class="cart__table-cell">
-							<input type="text" class="cart__table-input" placeholder="К-во" value="1">
-						</td>
-						<td class="cart__table-cell"><span class="cart__table-cost-here">28500</span></td>
-						<td class="cart__table-cell cart__table-cell_last" rowspan="3">
-							<button class="cart__table-delete-btn">
-								<svg class="cart__table-delete-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 31" width="32" height="31">
-									<path class="cart__table-delete-btn-svg-path" d="M28.321,26.003 L31.601,29.284 C31.990,29.673 31.990,30.304 31.601,30.693 C31.406,30.887 31.151,30.985 30.897,30.985 C30.642,30.985 30.387,30.887 30.192,30.693 L26.913,27.412 L23.634,30.693 C23.439,30.887 23.185,30.985 22.930,30.985 C22.675,30.985 22.420,30.887 22.226,30.693 C21.837,30.304 21.837,29.673 22.226,29.284 L25.505,26.003 L22.226,22.723 C21.837,22.334 21.837,21.703 22.226,21.314 C22.615,20.924 23.245,20.924 23.634,21.314 L26.913,24.595 L30.192,21.314 C30.581,20.924 31.212,20.924 31.601,21.314 C31.990,21.703 31.990,22.334 31.601,22.723 L28.321,26.003 ZM29.198,19.070 C28.660,18.957 28.314,18.428 28.428,17.890 L29.669,11.993 L2.298,11.993 L6.000,26.000 L19.000,26.000 C19.550,26.000 19.942,26.387 19.942,26.937 C19.942,27.487 19.497,27.934 18.947,27.934 L5.005,27.934 C4.548,27.934 4.150,27.622 4.039,27.179 L0.056,11.239 C-0.019,10.941 0.048,10.625 0.237,10.384 C0.426,10.142 0.715,10.001 1.022,10.001 L7.017,10.001 C7.022,9.917 7.020,9.832 7.048,9.748 L10.036,0.781 C10.210,0.260 10.769,-0.023 11.295,0.151 C11.816,0.326 12.098,0.890 11.924,1.411 L9.062,10.001 L22.856,10.001 L19.994,1.411 C19.820,0.890 20.102,0.326 20.623,0.151 C21.150,-0.023 21.708,0.260 21.882,0.781 L24.870,9.748 C24.898,9.832 24.896,9.917 24.901,10.001 L30.897,10.001 C31.197,10.001 31.481,10.136 31.670,10.369 C31.859,10.602 31.933,10.909 31.871,11.202 L30.377,18.301 C30.264,18.839 29.735,19.184 29.198,19.070 Z"/>
-								</svg>
-							</button>
-						</td>
-					</tr>
-					<tr class="cart__table-row">
-						<td class="cart__table-cell">
-							<h5 class="cart__table-subtitle">Общая сумма товаров</h5>
-							<p class="cart__table-info">
-								без учета доставки
-							</p>
-						</td>
-						<td class="cart__table-cell cart__table-cell_intermediate" colspan="3">28 500 ₽</td>
-					</tr>
-					<tr class="cart__table-row">
-						<td class="cart__table-cell">
-							<h5 class="cart__table-subtitle">Стоимость доставки</h5>
-							<p class="cart__table-info">
-								не указана
-							</p>
-						</td>
-						<td class="cart__table-cell cart__table-cell_intermediate" colspan="3">0 ₽</td>
-					</tr>
-					<tr class="cart__table-row">
-						<td class="cart__table-cell">
-							<h5 class="cart__table-subtitle">Общая сумма товаров с учетом доставки</h5>
-						</td>
-						<td class="cart__table-cell cart__table-cell_total" colspan="4">28 500 ₽</td>
-					</tr>
-				</table>
-				<div class="cart__groups">
-					<div class="cart__group">
-						<h3 class="cart__title">Доставка:</h3>
-						<ul class="cart__radio-btn-list">
-							<li class="cart__radio-btn">
-								<input class="cart__radio" type="radio" name="delivery" id="delivery-by-themselves" value="by-themselves" checked>
-								<label class="cart__radio-label" for="delivery-by-themselves">
-									<span class="cart__label-title">Самовывоз</span>
-									<span class="cart__label-info">
-										(получение заказанного товара в нашем<br>магазине/складе/офисе)
-									</span>
-								</label>
-							</li>
-							<li class="cart__radio-btn">
-								<input class="cart__radio" type="radio" name="delivery" id="delivery-within" value="within">
-								<label class="cart__radio-label" for="delivery-within">
-									<span class="cart__label-title">В пределах МКАД</span>
-									<span class="cart__label-info">
-										(Курьерская доставка по указанному адресу.<br>Стоимость доставки по Москве 1500 руб.)
-									</span>
-								</label>
-							</li>
-							<li class="cart__radio-btn">
-								<input class="cart__radio" type="radio" name="delivery" id="delivery-outside" value="outside">
-								<label class="cart__radio-label" for="delivery-outside">
-									<span class="cart__label-title">За пределами МКАД</span>
-									<span class="cart__label-info">
-										(Курьерская доставка по указанному адресу.<br>Стоимость доставки от МКАД 30 руб. x км.)
-									</span>
-								</label>
-							</li>
-						</ul>
-					</div>
-					<div class="cart__group">
-						<h3 class="cart__title">Способ оплаты:</h3>
-						<ul class="cart__radio-btn-list">
-							<li class="cart__radio-btn">
-								<input class="cart__radio" type="radio" name="payment" id="payment-cash" value="cash">
-								<label class="cart__radio-label" for="payment-cash">
-									<span class="cart__label-title">Наличный расчет</span>
-									<span class="cart__label-info">
-										(оплата в нашем магазине наличными)
-									</span>
-								</label>
-							</li>
-							<li class="cart__radio-btn">
-								<input class="cart__radio" type="radio" name="payment" id="payment-cashless" value="cashless" checked>
-								<label class="cart__radio-label" for="payment-cashless">
-									<span class="cart__label-title">Безналичный расчет</span>
-									<span class="cart__label-info">
-										(оплата безналичными средствами с помощью<br>карт/платежных систем)
-									</span>
-								</label>
-							</li>
-						</ul>						
-					</div>
+			<h1 class="section-title section-title_single">Кредит</h1>
+			<div class="service-information">
+				<div class="service-information__image">
+					<img src="img/service-information-image.jpg" alt="service-information-image" class="scalable-image">
 				</div>
-				<h3 class="cart__title">Данные пользователя:</h3>
-				<div class="cart__user-data">
-					<div class="cart__required-input">
-						<input class="cart__input" type="text" name="full-name" id="full-name-input" placeholder="ФИО">
-					</div>
-					<div class="cart__form-row">
-						<div class="cart__required-input">
-							<input class="cart__input" type="email" name="email" id="email-input" placeholder="Email">
-						</div>
-						<div class="cart__required-input">
-							<input class="cart__input" type="text" name="phone" id="phone-input" placeholder="Телефон">
-						</div>
-					</div>
-					<textarea name="comment" id="comment-textarea" class="cart__textarea" placeholder="Комментарий"></textarea>
-					<input class="cart__checkbox" type="checkbox" id="cart-policy" name="policy">
-					<label class="cart__policy-label" for="cart-policy">
-						<svg class="cart__policy-svg" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 442.533 442.533">
-							<path class="cart__policy-svg-path" d="M434.539,98.499l-38.828-38.828c-5.324-5.328-11.799-7.993-19.41-7.993c-7.618,0-14.093,2.665-19.417,7.993L169.59,247.248	l-83.939-84.225c-5.33-5.33-11.801-7.992-19.412-7.992c-7.616,0-14.087,2.662-19.417,7.992L7.994,201.852	C2.664,207.181,0,213.654,0,221.269c0,7.609,2.664,14.088,7.994,19.416l103.351,103.349l38.831,38.828	c5.327,5.332,11.8,7.994,19.414,7.994c7.611,0,14.084-2.669,19.414-7.994l38.83-38.828L434.539,137.33	c5.325-5.33,7.994-11.802,7.994-19.417C442.537,110.302,439.864,103.829,434.539,98.499z"/>
-						</svg>
-						Я соглашаюсь с политикой безопасности
-					</label>
-					<button class="cart__submit-btn" type="submit">Оформить заказ</button>
+				<h2 class="service-information__title">Доставка по Москве в пределах МКАД</h2>
+				<h3 class="service-information__subtitle">Время доставки:</h3>
+				<p class="service-information__info">
+					C понедельника по пятницу с 9:00 до 18:00;<br>В субботу с 9:00 до 17:00
+				</p>
+				<h3 class="service-information__subtitle">Расчет стоимости доставки:</h3>
+				<p class="service-information__info">
+					C помощью менеджера-консультанта по тел.: +7 (111) 222-33-44<br>Cамостоятельно по таблице
+				</p>
+				<h3 class="service-information__subtitle">Заказы от 5000р:</h3>
+				<p class="service-information__info">
+					Доставка по Москве в пределах МКАД 1500р, до подьезда. Подъем в стоимость доставки не входит!!! Цена за подъем на этаж и за то, что рабочие занесут дверь в квартиру, оговаривается отдельно.
+				</p>
+				<h3 class="service-information__subtitle">Заказы менее 5000р рублей:</h3>
+				<p class="service-information__info">
+					Мы с удовольствием соберем и приготовим для самовывоза со склада в Строгино.
+				</p>
+				<div class="service-information__image">
+					<img src="img/service-information-image.jpg" alt="service-information-image" class="scalable-image">
 				</div>
-			</form>
+				<h2 class="service-information__title">Доставка по Москве в пределах МКАД</h2>
+				<h3 class="service-information__subtitle">Время доставки:</h3>
+				<p class="service-information__info">
+					C понедельника по пятницу с 9:00 до 18:00;<br>В субботу с 9:00 до 17:00
+				</p>
+				<h3 class="service-information__subtitle">Расчет стоимости доставки:</h3>
+				<p class="service-information__info">
+					C помощью менеджера-консультанта по тел.: +7 (111) 222-33-44<br>Cамостоятельно по таблице
+				</p>
+				<h3 class="service-information__subtitle">Заказы от 5000р:</h3>
+				<p class="service-information__info">
+					Доставка по Москве в пределах МКАД 1500р, до подьезда. Подъем в стоимость доставки не входит!!! Цена за подъем на этаж и за то, что рабочие занесут дверь в квартиру, оговаривается отдельно.
+				</p>
+				<h3 class="service-information__subtitle">Заказы менее 5000р рублей:</h3>
+				<p class="service-information__info">
+					Мы с удовольствием соберем и приготовим для самовывоза со склада в Строгино.
+				</p>
+			</div>
 		</div>
 	</section>
 	<footer class="footer">
@@ -371,8 +271,6 @@
 			</nav>
 		</div>
 	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/common.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>

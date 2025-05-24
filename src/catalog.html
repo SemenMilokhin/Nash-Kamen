@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nash Kamen</title>
-
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="sass/style.scss">
 </head>
 <body>
 	<header class="header">
@@ -128,133 +127,215 @@
 			</div>	
 		</div>
 	</header>
-	<section class="section-sales">
-		<div class="container section-sales__container">
+	<section class="section-production">
+		<div class="container section-production__container section-production__container_single">
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs__item">
 					<a href="index.html" class="breadcrumbs__link">Главная</a>
 				</li>
-				<li class="breadcrumbs__item breadcrumbs__item_this-page">Акции</li>
+				<li class="breadcrumbs__item breadcrumbs__item_this-page">Наша продукция</li>
 			</ul>
-			<h1 class="section-title section-title_single">Акции</h1>
-			<ul class="sales">
-				<li class="sales__item">
-					<a href="sale.html" class="sales__link">
-						<span class="sales__image">
-							<img src="img/sales-image.jpg" alt="sales-image" class="scalable-image">
-						</span>
-						<span class="sales__text-wrapper">
-							<span class="sales__heading-wrapper">
-								<span class="sales__heading">Акция 1</span>
+			<h1 class="section-title section-title_single">Наша продукция</h1>
+			<div class="production production_stone-after">
+				<ul class="production__column production__column_1">
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-1.jpg" alt="production-image" class="scalable-image">
 							</span>
-							<span class="sales__description">
-								Описание акции, может быть длинным<br>И даже в две строки
+							<span class="production__text-part">
+								<span class="production__heading">Искусственный камень</span>
 							</span>
-							<span class="sales__date">Действует до 21.07.2019</span>
-						</span>
-					</a>
-				</li>
-				<li class="sales__item">
-					<a href="sale.html" class="sales__link">
-						<span class="sales__image">
-							<img src="img/sales-image.jpg" alt="sales-image" class="scalable-image">
-						</span>
-						<span class="sales__text-wrapper">
-							<span class="sales__heading-wrapper">
-								<span class="sales__heading">Акция 1</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-2.jpg" alt="production-image" class="scalable-image">
 							</span>
-							<span class="sales__description">
-								Описание акции, может быть длинным<br>И даже в две строки
+							<span class="production__text-part">
+								<span class="production__heading">ЖБИ</span>
 							</span>
-							<span class="sales__date">Действует до 21.07.2019</span>
-						</span>
-					</a>
-				</li>
-				<li class="sales__item">
-					<a href="sale.html" class="sales__link">
-						<span class="sales__image">
-							<img src="img/sales-image.jpg" alt="sales-image" class="scalable-image">
-						</span>
-						<span class="sales__text-wrapper">
-							<span class="sales__heading-wrapper">
-								<span class="sales__heading">Акция 1</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-3.jpg" alt="production-image" class="scalable-image">
 							</span>
-							<span class="sales__description">
-								Описание акции, может быть длинным<br>И даже в две строки
+							<span class="production__text-part">
+								<span class="production__heading">Щебень</span>
 							</span>
-							<span class="sales__date sales__date_completed">Акция завершена</span>
-						</span>
-					</a>
-				<li class="sales__item">
-					<a href="sale.html" class="sales__link">
-						<span class="sales__image">
-							<img src="img/sales-image.jpg" alt="sales-image" class="scalable-image">
-						</span>
-						<span class="sales__text-wrapper">
-							<span class="sales__heading-wrapper">
-								<span class="sales__heading">Акция 1</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-4.jpg" alt="production-image" class="scalable-image">
 							</span>
-							<span class="sales__description">
-								Описание акции, может быть длинным<br>И даже в две строки
+							<span class="production__text-part">
+								<span class="production__heading">Перегородки и пол</span>
 							</span>
-							<span class="sales__date sales__date_completed">Акция завершена</span>
-						</span>
-					</a>
-				</li>
-				<li class="sales__item">
-					<a href="sale.html" class="sales__link">
-						<span class="sales__image">
-							<img src="img/sales-image.jpg" alt="sales-image" class="scalable-image">
-						</span>
-						<span class="sales__text-wrapper">
-							<span class="sales__heading-wrapper">
-								<span class="sales__heading">Акция 1</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-5.jpg" alt="production-image" class="scalable-image">
 							</span>
-							<span class="sales__description">
-								Описание акции, может быть длинным<br>И даже в две строки
+							<span class="production__text-part">
+								<span class="production__heading">Сайдинг</span>
 							</span>
-							<span class="sales__date sales__date_completed">Акция завершена</span>
-						</span>
-					</a>
-				</li>
-				<li class="sales__item">
-					<a href="sale.html" class="sales__link">
-						<span class="sales__image">
-							<img src="img/sales-image.jpg" alt="sales-image" class="scalable-image">
-						</span>
-						<span class="sales__text-wrapper">
-							<span class="sales__heading-wrapper">
-								<span class="sales__heading">Акция 1</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-6.jpg" alt="production-image" class="scalable-image">
 							</span>
-							<span class="sales__description">
-								Описание акции, может быть длинным<br>И даже в две строки
+							<span class="production__text-part">
+								<span class="production__heading">Кровля</span>
 							</span>
-							<span class="sales__date sales__date_completed">Акция завершена</span>
-						</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="pagination">
-				<li class="pagination__item pagination__item_selected">1</li>
-				<li class="pagination__item">
-					<a href="#" class="pagination__link">2</a>
-				</li>
-				<li class="pagination__item">
-					<a href="#" class="pagination__link">3</a>
-				</li>
-				<li class="pagination__item">
-					<a href="#" class="pagination__link">4</a>
-				</li>
-				<li class="pagination__item">
-					<a href="#" class="pagination__link">5</a>
-				</li>
-				<li class="pagination__item pagination__item_not-a-link">
-					...
-				</li>
-				<li class="pagination__item pagination__item_next-btn">
-					<a href="#" class="pagination__link pagination__link_next-btn">Далее</a>
-				</li>
-			</ul>
+						</a>
+					</li>
+				</ul>
+				<ul class="production__column production__column_2">
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-7.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Природный камень плитняк</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-8.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Топливные брикеты</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-9.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Песок</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-10.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Направляющие</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-11.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Пластиковые панели</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-12.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Водосточная система</span>
+							</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="production__column production__column_3">
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-13.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Блоки</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-14.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Валуны и буты</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-15.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Сухие смеси</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-16.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Сетка</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-17.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Терассная доска</span>
+							</span>
+						</a>
+					</li>
+					<li class="production__item">
+						<a href="production_one.html" class="production__link">
+							<span class="production__image production__image_low-height">
+								<img src="img/production-image-18.jpg" alt="production-image" class="scalable-image">
+							</span>
+							<span class="production__text-part">
+								<span class="production__heading">Сопутствующие товары</span>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="about-us">
+				<h2 class="about-us__title">Камень<br>от производителя<br>в Москве и МО</h2>
+				<p class="about-us__paragraph">
+					Сегодня на рынке строительных ресурсов есть много материалов для внутренней и внешней отделки помещений. Однако среди всего этого многообразия дизайнеры все чаще отдают свое предпочтение камню.
+				</p>
+				<p class="about-us__paragraph">
+					Обычно камень применяют для внешней отделки зданий, т.е. для оформления колонн, окон, фундаментов, цоколей, ограждений и фасадов. Однако креативные люди предпринимают оригинальные решения и используют камень при внутренней отделке помещения.<br>В качестве отделочного материала для каминов, каминных труб, гаражей можно смело использовать камень. Он прекрасно справляется с оформлением мостиков, бордюров, искусственных водоемов, дорожек, беседок и так далее.<br>Компания Наш Камень представляет вашему вниманию широкий ассортимент камня для отделки вашего дома, а так же в ландшафтном дизайне.
+				</p>
+				<p class="about-us__paragraph">
+					Помимо облицовочных и сопутствующих материалов из натурального и искусственного камня, мы предлагаем большой ассортимент материала для строительства: кирпич, строительные смеси, утеплитель, гипсокартон, грунтовки, ЖБИ кольца и плиты, а также керамическая плитка, ступени, галька, мраморная крошка, декоративные элементы, кованные изделия.<br>Компания "Наш камень"
+				</p>
+			</div>
 		</div>
 	</section>
 	<footer class="footer">
@@ -348,8 +429,6 @@
 			</nav>
 		</div>
 	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/common.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>
